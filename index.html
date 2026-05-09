@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>E-Hadir Solat MRSM SAS</title>
-    <!-- Favicon MRSM (Pilihan) -->
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/d/df/Logo_MRSM.png">
+    <title>Portal E-Hadir Solat MRSM SAS</title>
+    
+    <!-- Warna Tema Hijau Islamik diletakkan di luar iframe supaya loading screen nampak kemas -->
+    <meta name="theme-color" content="#064e3b">
+    
     <style>
+        /* Tetapan membuang sebarang ruang kosong & jadikan ia saiz penuh */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Mengelakkan skrol berganda */
+            background-color: #064e3b; /* Warna Emerald Gelap (Islamik) */
+        }
+
+        /* Iframe disetkan untuk mengisi 100% ruang skrin tanpa garisan */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Optional: Loading Text Sementara Menunggu Google Script */
+        #loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ecfdf5; /* Hijau pudar */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            z-index: -1; /* Berada di belakang iframe */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-text">Memuatkan Sistem MRSM SAS...</div>
+
+    <!-- Gantikan Pautan Di Bawah Dengan Pautan (URL) Web App Google Apps Script Anda Yang Baharu -->
+    <iframe src="https://script.google.com/macros/s/AKfycbwtsKnWg0wG5Zmk1zsgqA7rsz-a7eNwfeQA7Hfvtb7X7kplL1kmf3ioflmXaJ6GNSdw/exec" allow="fullscreen"></iframe>
+
+</body>
+</html>
         /* Tetapan supaya iframe memenuhi seluruh skrin secara normal */
         body, html {
             margin: 0;
