@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>E-Hadir Solat MRSM SAS</title>
+    <!-- Favicon MRSM (Pilihan) -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/d/df/Logo_MRSM.png">
+    <style>
+        /* Tetapan supaya iframe memenuhi seluruh skrin tanpa border */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Buang scrollbar luaran */
+            background-color: #064e3b; 
+        }
+        
+        /* TRIK MENYOROKKAN BANNER GOOGLE */
+        .iframe-container {
+            position: absolute;
+            top: -45px; /* Tolak 45px ke atas untuk sembunyikan banner Google */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        
+        iframe {
+            border: none;
+            width: 100%;
+            /* Tambah semula 45px supaya bahagian bawah aplikasi tak terpotong */
+            height: calc(100% + 45px); 
+            display: block;
+        }
+
+        /* Teks loading sekiranya internet perlahan */
+        .loading-teks {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: sans-serif;
+            font-size: 14px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-teks">Menyambung ke Pangkalan Data...</div>
+    
+    <div class="iframe-container">
+        <!-- GANTIKAN LINK DI BAWAH DENGAN LINK WEB APP APPS SCRIPT ANDA -->
+        <iframe src="https://script.google.com/macros/s/AKfycbyEbowVqrWEEmdwPGMGD9nqLvoVhOHcPwdmKo3dGK45Rnm3qlqwOU9obaokyE-ibq1z/exec" allowfullscreen></iframe>
+    </div>
+    
+</body>
+</html>
